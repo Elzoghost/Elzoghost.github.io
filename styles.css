@@ -1,88 +1,91 @@
-/* styles.css */
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
+/* Header section */
 header {
+    background-color: #003366;
+    color: white;
     text-align: center;
-    padding: 20px 0;
-    background: #007bff;
-    color: #fff;
-    border-radius: 8px 8px 0 0;
+    padding: 2rem 0;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 
 header p {
-    font-size: 1.2em;
-    margin: 0;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
 }
 
-.section {
-    margin: 20px 0;
+/* Section styling */
+section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.section h2 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    font-size: 1.8em;
-    margin-bottom: 10px;
+h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.5rem;
 }
 
+/* Project section */
 .project {
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
 }
 
 .project h3 {
-    font-size: 1.4em;
-    margin: 0;
-}
-
-.project a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.project a:hover {
-    text-decoration: underline;
+    font-size: 1.5rem;
+    color: #003366;
+    margin-bottom: 0.5rem;
 }
 
 .project p {
-    font-size: 1em;
-    margin: 5px 0;
+    font-size: 1rem;
+    margin: 0.2rem 0;
 }
 
-.contact-info {
-    margin-top: 20px;
+/* Contact section */
+#contact {
+    text-align: center;
 }
 
-.contact-info p {
-    font-size: 1.2em;
-    margin: 10px 0;
+#contact p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
 }
 
-.contact-info a {
-    color: #007bff;
-    text-decoration: none;
+/* Footer styling */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.contact-info a:hover {
-    text-decoration: underline;
+footer p {
+    font-size: 0.9rem;
 }
