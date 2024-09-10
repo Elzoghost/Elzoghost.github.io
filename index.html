@@ -1,205 +1,208 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio professionnel d'Elhadji Fallou Diop, spécialiste en Data Science, Data Engineering et Business Intelligence.">
-    <title>Elhadji Fallou Diop - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Elhadji Fallou Diop - Data Scientist & Engineer</title>
     <style>
+        /* General styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
             background-color: #f4f4f4;
+            color: #333;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+
         header {
+            background-color: #003366;
+            color: white;
             text-align: center;
-            padding: 20px 0;
-            background: #007bff;
-            color: #fff;
+            padding: 2rem 0;
         }
+
         header h1 {
             margin: 0;
+            font-size: 2.5rem;
         }
-        .section {
-            margin: 20px 0;
+
+        header p {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
         }
-        .section h2 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
+
+        section {
+            margin: 2rem auto;
+            padding: 1rem;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        h2 {
+            border-bottom: 2px solid #003366;
+            padding-bottom: 0.5rem;
+            color: #003366;
+        }
+
         .project {
-            margin-bottom: 15px;
+            margin-bottom: 1.5rem;
         }
-        .project a {
-            color: #007bff;
-            text-decoration: none;
+
+        .project h3 {
+            font-size: 1.5rem;
+            color: #003366;
+            margin-bottom: 0.5rem;
         }
-        .project a:hover {
-            text-decoration: underline;
+
+        .project p {
+            margin: 0.2rem 0;
         }
-        .contact-info {
-            margin-top: 20px;
+
+        #contact {
+            text-align: center;
         }
-        .contact-info a {
-            color: #007bff;
-            text-decoration: none;
+
+        #contact p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
         }
     </style>
 </head>
-<body>
 
+<body>
     <header>
-        <div class="container">
-            <h1>Elhadji Fallou Diop</h1>
-            <p>Spécialiste en Data Science, Data Engineering & Business Intelligence | Expertise en Machine Learning & Big Data | Passionné par l'IA</p>
-        </div>
+        <h1>Elhadji Fallou Diop</h1>
+        <p>Spécialiste en Data Science, Data Engineering & Business Intelligence</p>
+        <p>Expertise en Machine Learning & Big Data | Passionné par l'IA</p>
     </header>
 
-    <div class="container">
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>
+            Je suis Elhadji Fallou Diop, expert en Data Science, Data Engineering et Business Intelligence, avec une
+            passion pour le Machine Learning et le Big Data. Fort de plusieurs années d'expérience, j'ai développé des
+            compétences approfondies dans la conception de modèles prédictifs et la gestion de pipelines de données
+            complexes. Je mets à profit mon expertise technique et mon approche innovante pour apporter des solutions à
+            forte valeur ajoutée dans chaque projet.
+        </p>
+    </section>
 
-        <section class="section">
-            <h2>À Propos de Moi</h2>
-            <p>Je suis Elhadji Fallou Diop, spécialiste en Data Science, Data Engineering et Business Intelligence, passionné par le Machine Learning et le Big Data. Avec plusieurs années d'expérience dans le développement de modèles prédictifs et la gestion de pipelines de données, j'apporte une expertise solide et une approche innovante à chaque projet.</p>
-        </section>
+    <section id="projects">
+        <h2>Projets récents</h2>
 
-        <section class="section">
-            <h2>Mes Projets</h2>
+        <div class="project">
+            <h3>NLP_FakeNews</h3>
+            <p>Détection de fausses nouvelles en utilisant des techniques de traitement du langage naturel (NLP).</p>
+            <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> NLP, Scikit-Learn</p>
+            <p><strong>Dernière mise à jour :</strong> Juillet 20</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/NLP_FakeNews" target="_blank">NLP_FakeNews</a></h3>
-                <p>Détection de fausses nouvelles en utilisant des techniques de traitement du langage naturel (NLP). Ce projet inclut des analyses de texte pour identifier les articles peu fiables.</p>
-                <p><strong>Langages :</strong> Python<br>
-                   <strong>Technologies :</strong> NLP, Scikit-Learn<br>
-                   <strong>Dernière Mise à Jour :</strong> Juillet 20
-                </p>
-            </div>
+        <div class="project">
+            <h3>Detection_FakeNews_IA</h3>
+            <p>Détection de fausses nouvelles à l'aide de modèles d'IA pour évaluer la fiabilité des articles.</p>
+            <p><strong>Langages :</strong> Jupyter Notebook | <strong>Technologies :</strong> IA, Machine Learning</p>
+            <p><strong>Dernière mise à jour :</strong> Mai 12</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Detection_FakeNews_IA" target="_blank">Detection_FakeNews_IA</a></h3>
-                <p>Détection de fausses nouvelles en utilisant des modèles d'IA. Ce projet se concentre sur l'analyse des articles pour évaluer leur fiabilité.</p>
-                <p><strong>Langages :</strong> Jupyter Notebook<br>
-                   <strong>Technologies :</strong> IA, Machine Learning<br>
-                   <strong>Dernière Mise à Jour :</strong> Mai 12
-                </p>
-            </div>
+        <div class="project">
+            <h3>Detection_LLM_Text</h3>
+            <p>Détection de contenu trompeur à l'aide de modèles de langage large (LLM).</p>
+            <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> LLM, NLP</p>
+            <p><strong>Dernière mise à jour :</strong> Nov 3</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Detection_LLM_Text" target="_blank">Detection_LLM_Text</a></h3>
-                <p>Détection de contenu trompeur à l'aide de modèles de langage large (LLM). Le projet analyse les textes pour détecter des incohérences ou des biais.</p>
-                <p><strong>Langages :</strong> Python<br>
-                   <strong>Technologies :</strong> LLM, NLP<br>
-                   <strong>Dernière Mise à Jour :</strong> Nov 3
-                </p>
-            </div>
+        <div class="project">
+            <h3>Detection_Fake_Reviews_IA</h3>
+            <p>Détection de critiques fausses en utilisant des algorithmes d'IA.</p>
+            <p><strong>Langages :</strong> Jupyter Notebook | <strong>Technologies :</strong> IA, Machine Learning</p>
+            <p><strong>Dernière mise à jour :</strong> Oct 26</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Detection_Fake_Reviews_IA" target="_blank">Detection_Fake_Reviews_IA</a></h3>
-                <p>Détection de critiques fausses en utilisant des algorithmes d'IA. Le projet évalue la véracité des avis en ligne.</p>
-                <p><strong>Langages :</strong> Jupyter Notebook<br>
-                   <strong>Technologies :</strong> IA, Machine Learning<br>
-                   <strong>Dernière Mise à Jour :</strong> Oct 26
-                </p>
-            </div>
+        <div class="project">
+            <h3>Classification_Conv2net_MNIST</h3>
+            <p>Classification des chiffres MNIST en utilisant des réseaux de neurones convolutifs (ConvNet).</p>
+            <p><strong>Langages :</strong> Jupyter Notebook | <strong>Technologies :</strong> CNN, Machine Learning</p>
+            <p><strong>Dernière mise à jour :</strong> Sep 11</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Classification_Conv2net_MNIST" target="_blank">Classification_Conv2net_MNIST</a></h3>
-                <p>Classification des chiffres MNIST en utilisant des réseaux de neurones convolutifs (ConvNet). Ce projet se concentre sur l'amélioration des performances de classification.</p>
-                <p><strong>Langages :</strong> Jupyter Notebook<br>
-                   <strong>Technologies :</strong> CNN, Machine Learning<br>
-                   <strong>Dernière Mise à Jour :</strong> Sep 11
-                </p>
-            </div>
+        <div class="project">
+            <h3>Classification_des_critiques_de_films</h3>
+            <p>Classification des critiques de films pour identifier les sentiments et les thèmes principaux.</p>
+            <p><strong>Langages :</strong> Jupyter Notebook | <strong>Technologies :</strong> NLP, Machine Learning</p>
+            <p><strong>Dernière mise à jour :</strong> Sep 9</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Classification_des_critiques_de_films" target="_blank">Classification_des_critiques_de_films</a></h3>
-                <p>Classification des critiques de films en utilisant des techniques de machine learning pour identifier les sentiments et les thèmes principaux.</p>
-                <p><strong>Langages :</strong> Jupyter Notebook<br>
-                   <strong>Technologies :</strong> NLP, Machine Learning<br>
-                   <strong>Dernière Mise à Jour :</strong> Sep 9
-                </p>
-            </div>
+        <div class="project">
+            <h3>Netflix_Recommandation</h3>
+            <p>Système de recommandation pour Netflix basé sur les préférences des utilisateurs.</p>
+            <p><strong>Langages :</strong> Jupyter Notebook | <strong>Technologies :</strong> Recommandation, Machine Learning</p>
+            <p><strong>Dernière mise à jour :</strong> Aug 25</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Netflix_Recommandation" target="_blank">Netflix_Recommandation</a></h3>
-                <p>Système de recommandation pour Netflix basé sur les préférences des utilisateurs. Le projet utilise des techniques de filtrage collaboratif et de contenu.</p>
-                <p><strong>Langages :</strong> Jupyter Notebook<br>
-                   <strong>Technologies :</strong> Recommandation, Machine Learning<br>
-                   <strong>Dernière Mise à Jour :</strong> Aug 25
-                </p>
-            </div>
+        <div class="project">
+            <h3>Algo_Recommandation</h3>
+            <p>Développement d'algorithmes de recommandation pour divers cas d'utilisation.</p>
+            <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> Recommandation, Machine Learning</p>
+            <p><strong>Dernière mise à jour :</strong> Aug 25</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Algo_Recommandation" target="_blank">Algo_Recommandation</a></h3>
-                <p>Développement d'algorithmes de recommandation pour divers cas d'utilisation. Ce projet explore différentes approches pour améliorer les recommandations.</p>
-                <p><strong>Langages :</strong> Python<br>
-                   <strong>Technologies :</strong> Recommandation, Machine Learning<br>
-                   <strong>Dernière Mise à Jour :</strong> Aug 25
-                </p>
-            </div>
+        <div class="project">
+            <h3>Perceptron</h3>
+            <p>Implémentation d'un perceptron pour des tâches de classification binaire.</p>
+            <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> Machine Learning</p>
+            <p><strong>Dernière mise à jour :</strong> Aug 25</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Perceptron" target="_blank">Perceptron</a></h3>
-                <p>Implémentation d'un perceptron pour des tâches de classification binaire. Le projet démontre les bases des réseaux de neurones.</p>
-                <p><strong>Langages :</strong> Python<br>
-                   <strong>Technologies :</strong> Machine Learning<br>
-                   <strong>Dernière Mise à Jour :</strong> Aug 25
-                </p>
-            </div>
+        <div class="project">
+            <h3>Chat_Bot_IA</h3>
+            <p>Développement d'un chatbot intelligent utilisant des techniques de traitement du langage naturel.</p>
+            <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> NLP, Chatbot</p>
+            <p><strong>Dernière mise à jour :</strong> Aug 25</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Chat_Bot_IA" target="_blank">Chat_Bot_IA</a></h3>
-                <p>Développement d'un chatbot intelligent utilisant des techniques de traitement du langage naturel pour des interactions utilisateur.</p>
-                <p><strong>Langages :</strong> Python<br>
-                   <strong>Technologies :</strong> NLP, Chatbot<br>
-                   <strong>Dernière Mise à Jour :</strong> Aug 25
-                </p>
-            </div>
+        <div class="project">
+            <h3>Boosting</h3>
+            <p>Mise en œuvre de techniques de boosting pour améliorer la performance des modèles de classification.</p>
+            <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> Boosting, Machine Learning</p>
+            <p><strong>Dernière mise à jour :</strong> Aug 25</p>
+        </div>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Boosting" target="_blank">Boosting</a></h3>
-                <p>Mise en œuvre de techniques de boosting pour améliorer la performance des modèles de classification. Ce projet illustre l'application d'algorithmes avancés.</p>
-                <p><strong>Langages :</strong> Python<br>
-                   <strong>Technologies :</strong> Boosting, Machine Learning<br>
-                   <strong>Dernière Mise à Jour :</strong> Aug 25
-                </p>
-            </div>
+        <div class="project">
+            <h3>Optimisation_Algorithmes</h3>
+            <p>Optimisation des algorithmes pour améliorer leur efficacité et leur vitesse.</p>
+            <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> Optimisation, Algorithmes</p>
+            <p><strong>Dernière mise à jour :</strong> Aug 25</p>
+        </div>
+    </section>
 
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Optimisation_Algorithmes" target="_blank">Optimisation_Algorithmes</a></h3>
-                <p>Optimisation des algorithmes pour améliorer leur efficacité et leur vitesse. Le projet se concentre sur l'optimisation des performances des algorithmes de traitement de données.</p>
-                <p><strong>Langages :</strong> Python<br>
-                   <strong>Technologies :</strong> Optimisation, Algorithmes<br>
-                   <strong>Dernière Mise à Jour :</strong> Aug 25
-                </p>
-            </div>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Email :</strong> elzodp125@gmail.com</p>
+        <p><strong>Téléphone :</strong> 0784999296</p>
+        <p><strong>Adresse :</strong> 42 Rue Raymond Patenôtre, 78120 Rambouillet</p>
+    </section>
 
-        </section>
-
-        <section class="section contact-info">
-            <h2>Contact</h2>
-            <p>Vous pouvez me contacter via les moyens suivants :</p>
-            <p><strong>Email :</strong> <a href="mailto:elzodp125@gmail.com">elzodp125@gmail.com</a></p>
-            <p><strong>Téléphone :</strong> <a href="tel:+33784999296">0784999296</a></p>
-            <p><strong>Adresse :</strong> 42 Rue Raymond Patenôtre, 78120 Rambouillet, France</p>
-            <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">Elhadji Fallou Diop</a></p>
-        </section>
-
-    </div>
     <footer>
-        <p>&copy; 2024 Elzoghost. Tous droits réservés.</p>
+        <p>&copy; 2024 Elhadji Fallou Diop</p>
     </footer>
 </body>
+
 </html>
