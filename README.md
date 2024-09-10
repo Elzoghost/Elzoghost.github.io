@@ -3,8 +3,8 @@
 
 ## À Propos de Moi
 
-Je suis Elhadji Fallou Diop, un spécialiste en **Data Science**, **Data Engineering** et **Business Intelligence**, avec une expertise approfondie en **Machine Learning** et **Big Data**. Mon parcours académique et professionnel m'a permis de développer des compétences solides dans le développement de modèles prédictifs, la gestion de pipelines de données, et la mise en œuvre de solutions analytiques avancées.
-
+Je suis Elhadji Fallou Diop, un spécialiste en **Data Science**, **Data Engineering** et **Business Intelligence**, avec une expertise approfondie en **Machine Learning** et **Big Data**.\\ Mon parcours académique et professionnel m'a permis de développer des compétences solides dans le développement de modèles prédictifs, la gestion de pipelines de données, et la mise en œuvre de solutions analytiques avancées.\\
+\\
 Avec plusieurs années d'expérience dans le domaine, j'apporte une approche innovante et axée sur les résultats à chaque projet. Mon objectif est de fournir des solutions de données précises et efficaces pour répondre aux besoins des entreprises et des utilisateurs finaux.
 
 Bienvenue sur le portfolio en ligne de **Elzoghost** ! Ce site présente mes projets récents, compétences et informations de contact.
