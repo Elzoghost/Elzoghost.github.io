@@ -56,7 +56,7 @@ Pour toute question ou demande professionnelle, vous pouvez me contacter via :
 
 - **Email** : [elzodp125@gmail.com](mailto:elzodp125@gmail.com)
 - **Téléphone** : [0784999296](tel:+33784999296)
-- **LinkedIn** : [https://www.linkedin.com/in/elhadji-fallou-diop/](https://www.linkedin.com/in/elhadji-fallou-diop/)
+- **LinkedIn** : [https://www.linkedin.com/in/elhadji-fallou-diop](https://www.linkedin.com/in/elhadji-fallou-diop)
 - **GitHub** : [https://github.com/Elzoghost](https://github.com/Elzoghost)
 
 Merci de visiter mon portfolio ! J'espère que vous trouverez les informations intéressantes et utiles.
