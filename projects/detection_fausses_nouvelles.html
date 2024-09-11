@@ -20,7 +20,7 @@
     </header>
 
     <section class="project-details">
-        <h2>Détection de fausses nouvelles</h2>
+        <h2>Détection de fausses nouvelles surtout sur les articles peu fiables</h2>
         <p class="project-description">
             <strong>Description :</strong> Ce projet est une API web construite avec Flask pour prédire la fiabilité d'un texte donné en utilisant un modèle de machine learning pré-entraîné. L'API permet de soumettre des données JSON comprenant un titre, un auteur et un texte. Le texte est prétraité et traduit en anglais si nécessaire avant que la prédiction soit effectuée par le modèle. Les prédictions sont renvoyées sous forme de labels lisibles ("Fiable" ou "Peu Fiable").
         </p>
@@ -41,11 +41,22 @@
         <p class="project-tech">
             <strong>Technologies et Bibliothèques :</strong>
             <ul class="tech-list">
+                <li>pandas</li>
+                <li>requests,zipfile, io, os, shutil, wordcloud, sklearn</li>
+                <li>matplotlib</li>
                 <li>Flask</li>
                 <li>Joblib</li>
                 <li>Googletrans </li>
-                <li>TensorFlow & Keras</li>
-                <li>Scikit-learn</li>
+                <li>Transformers & Torch</li>
+                <li>tqdm</li>
+            </ul>
+        </p>
+        <p class="project-tech">
+            <strong>Modèles et outils :</strong>
+            <ul class="tech-list">
+                <li>BERT (BertTokenizer, BertForSequenceClassification)</li>
+                <li>Optimiseur AdamW</li>
+                <li>Planificateur de taux d'apprentissage (get_linear_schedule_with_warmup)</li>
             </ul>
         </p>
         <p class="project-steps">
@@ -53,13 +64,14 @@
             <ul class="steps-list">
                 <li>Chargement et nettoyage des données</li>
                 <li>Prétraitement et normalisation</li>
+                <li>Construction du modèle</li>
                 <li>Entraînement d'un modèle de réseau de neurones</li>
                 <li>Évaluation du modèle à l'aide de courbes de perte et d'accuracy</li>
                 <li>Matrice de confusion et visualisation des performances</li>
             </ul>
         </p>
         <p class="project-link">
-            <strong>Code source :</strong> Retrouvez le code complet de ce projet sur <a href="https://github.com/Elzoghost/NLP_FakeNews" target="_blank" class="project-link">NLP_FakeNews</a>.
+            <strong>Code source :</strong> Retrouvez le code complet de ce projet sur <a href="https://github.com/Elzoghost/Detection_FakeNews_IA" target="_blank" class="project-link">Detection_FakeNews_IA</a>.
         </p>
 
         <!-- Tu peux intégrer un dashboard ici via Plotly ou Bokeh -->
