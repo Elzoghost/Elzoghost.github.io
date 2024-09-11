@@ -3,193 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Elhadji Fallou Diop | Data Scientist & Data Engineer & Business Intelligence</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Portfolio de Elhadji Fallou Diop, spécialiste en Data Science, Data Engineering et Business Intelligence.">
+    <title>Elhadji Fallou Diop - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="header-title">Elhadji Fallou Diop</h1>
-            <p class="header-description">Spécialiste en Data Science, Data Engineering & Business Intelligence | Expertise en Machine Learning & Big Data | Passionné par l'IA</p>
-        </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos de moi</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">À Propos de Moi</h2>
-            <p class="about-description">Je suis Elhadji Fallou Diop, spécialiste en Data Science, Data Engineering et Business Intelligence, passionné par le Machine Learning et le Big Data. Avec plusieurs années d'expérience dans le développement de modèles prédictifs et la gestion de pipelines de données, j'apporte une expertise solide et une approche innovante à chaque projet.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elhadji Fallou Diop</h1>
+            <p>Spécialiste en Data Science, Data Engineering & Business Intelligence</p>
+            <a href="#projects" class="btn">Voir mes projets</a>
         </div>
     </section>
 
     <section id="projects" class="projects-section">
-        <div class="container">
-            <h2 class="section-title">Mes Projets</h2>
-
-                <div class="container">
-                <h2 class="project-title">Classification du Cancer du Sein</h2>
-                <p class="project-description">
-                    <strong>Description :</strong> Ce projet consiste à analyser un jeu de données sur le cancer du sein, à nettoyer les données et à créer des modèles de classification pour prédire si une tumeur est bénigne ou maligne. L'accent est mis sur la sélection de variables, la normalisation des données et l'utilisation d'un réseau de neurones pour les prédictions.
-                </p>
-                <p class="project-objective">
-                    <strong>Objectif :</strong> Comprendre l'ensemble de données et créer des modèles de classification performants, tout en ajustant les hyperparamètres et en comparant les performances de divers algorithmes.
-                </p>
-                <p class="project-languages">
-                    <strong>Langages utilisés :</strong> Python
-                </p>
-                <p class="project-tech">
-                    <strong>Technologies et Bibliothèques :</strong>
-                    <ul class="tech-list">
-                        <li>Pandas</li>
-                        <li>NumPy</li>
-                        <li>Matplotlib & Seaborn</li>
-                        <li>TensorFlow & Keras</li>
-                        <li>Scikit-learn</li>
-                    </ul>
-                </p>
-                <p class="project-steps">
-                    <strong>Étapes du Projet :</strong>
-                    <ul class="steps-list">
-                        <li>Chargement et nettoyage des données</li>
-                        <li>Prétraitement et normalisation</li>
-                        <li>Entraînement d'un modèle de réseau de neurones</li>
-                        <li>Évaluation du modèle à l'aide de courbes de perte et d'accuracy</li>
-                        <li>Matrice de confusion et visualisation des performances</li>
-                    </ul>
-                </p>
-                <p class="project-link">
-                    <strong>Code source :</strong> Retrouvez le code complet de ce projet sur <a href="https://github.com/Elzoghost/classification_type_cancer_du_sein" target="_blank" class="project-link">classification_type_cancer_du_sein</a>.
-                </p>
+        <h2>Mes Projets</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Classification du Cancer du Sein</h3>
+                <p>Utilisation de réseaux de neurones pour la classification des tumeurs bénignes et malignes.</p>
+                <a href="projects/classification_cancer_sein.html" class="btn">Voir le projet</a>
             </div>
-
-
-            <div class="container">
-                <h2 class="project-title">Détection de fausses nouvelles</h2>
-                <p class="project-description">
-                    <strong>Description :</strong> Ce projet est une API web construite avec Flask pour prédire la fiabilité d'un texte donné en utilisant un modèle de machine learning pré-entraîné. L'API permet de soumettre des données JSON comprenant un titre, un auteur et un texte. Le texte est prétraité et traduit en anglais si nécessaire avant que la prédiction soit effectuée par le modèle. Les prédictions sont renvoyées sous forme de labels lisibles ("Fiable" ou "Peu Fiable").
-                </p>
-                <p class="project-objective">
-                    <strong>Objectif :</strong> 'objectif de ce projet est de développer une API web capable de déterminer la fiabilité d'un texte en utilisant un modèle de machine learning pré-entraîné. Cette API facilite l'intégration de la classification des textes dans des applications ou des services en ligne. Voici les objectifs spécifiques :
-                    <ul class="steps-list">
-                        <li>**Prédiction de Fiabilité** : Évaluer si un texte est fiable ou peu fiable en utilisant un modèle de machine learning.</li>
-                        <li>**Traduction Automatique** : Traduire le texte en anglais si nécessaire avant l'analyse, pour permettre une évaluation uniforme quel que soit la langue originale du texte.</li>
-                        <li>**Prétraitement des Textes** : Nettoyer et préparer le texte pour améliorer la précision des prédictions du modèle.</li>
-                        <li>**Accessibilité via API** : Fournir un endpoint HTTP pour recevoir des données au format JSON, traiter les demandes, et retourner les résultats en JSON, facilitant ainsi l'intégration dans divers systèmes et applications.</li>
-                        <li>**Facilité d'Utilisation** : Offrir une interface simple pour tester et intégrer des fonctionnalités de détection de fiabilité des textes dans des projets ou des services en ligne.</li>
-                    </ul>
-
-                </p>
-                <p class="project-languages">
-                    <strong>Langages utilisés :</strong> Python
-                </p>
-                <p class="project-tech">
-                    <strong>Technologies et Bibliothèques :</strong>
-                    <ul class="tech-list">
-                        <li>Flask</li>
-                        <li>Joblib</li>
-                        <li>Googletrans </li>
-                        <li>TensorFlow & Keras</li>
-                        <li>Scikit-learn</li>
-                    </ul>
-                </p>
-                <p class="project-steps">
-                    <strong>Étapes du Projet :</strong>
-                    <ul class="steps-list">
-                        <li>Chargement et nettoyage des données</li>
-                        <li>Prétraitement et normalisation</li>
-                        <li>Entraînement d'un modèle de réseau de neurones</li>
-                        <li>Évaluation du modèle à l'aide de courbes de perte et d'accuracy</li>
-                        <li>Matrice de confusion et visualisation des performances</li>
-                    </ul>
-                </p>
-                <p class="project-link">
-                    <strong>Code source :</strong> Retrouvez le code complet de ce projet sur <a href="https://github.com/Elzoghost/NLP_FakeNews" target="_blank" class="project-link">NLP_FakeNews</a>.
-                </p>
+            <div class="project-card">
+                <h3>Détection de Fausses Nouvelles</h3>
+                <p>API web pour la détection de fausses nouvelles à partir d'un modèle de machine learning.</p>
+                <a href="projects/detection_fausses_nouvelles.html" class="btn">Voir le projet</a>
             </div>
-            
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Detection_FakeNews_IA" target="_blank" class="project-link">Detection_FakeNews_IA</a></h3>
-                <p>Détection de fausses nouvelles en utilisant des modèles d'IA. Ce projet se concentre sur l'analyse des articles pour évaluer leur fiabilité.</p>
-                <p><strong>Langages :</strong> Jupyter Notebook | <strong>Technologies :</strong> IA, Machine Learning | <strong>Dernière Mise à Jour :</strong> Mai 12</p>
-            </div>
-
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Detection_LLM_Text" target="_blank" class="project-link">Detection_LLM_Text</a></h3>
-                <p>Détection de contenu trompeur à l'aide de modèles de langage large (LLM). Le projet analyse les textes pour détecter des incohérences ou des biais.</p>
-                <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> LLM, NLP | <strong>Dernière Mise à Jour :</strong> Nov 3</p>
-            </div>
-
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Detection_Fake_Reviews_IA" target="_blank" class="project-link">Detection_Fake_Reviews_IA</a></h3>
-                <p>Détection de critiques fausses en utilisant des algorithmes d'IA. Le projet évalue la véracité des avis en ligne.</p>
-                <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> IA, Machine Learning | <strong>Dernière Mise à Jour :</strong> Oct 26</p>
-            </div>
-
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Classification_Conv2net_MNIST" target="_blank" class="project-link">Classification_Conv2net_MNIST</a></h3>
-                <p>Classification des chiffres MNIST en utilisant des réseaux de neurones convolutifs (ConvNet). Ce projet se concentre sur l'amélioration des performances de classification.</p>
-                <p><strong>Langages :</strong> Jupyter Notebook | <strong>Technologies :</strong> CNN, Machine Learning | <strong>Dernière Mise à Jour :</strong> Sep 11</p>
-            </div>
-
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Classification_des_critiques_de_films" target="_blank" class="project-link">Classification_des_critiques_de_films</a></h3>
-                <p>Classification des critiques de films en utilisant des techniques de machine learning pour identifier les sentiments et les thèmes principaux.</p>
-                <p><strong>Langages :</strong> Jupyter Notebook | <strong>Technologies :</strong> NLP, Machine Learning | <strong>Dernière Mise à Jour :</strong> Sep 9</p>
-            </div>
-
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Netflix_Recommandation" target="_blank" class="project-link">Netflix_Recommandation</a></h3>
-                <p>Système de recommandation pour Netflix basé sur les préférences des utilisateurs. Le projet utilise des techniques de filtrage collaboratif et de contenu.</p>
-                <p><strong>Langages :</strong> Jupyter Notebook | <strong>Technologies :</strong> Recommandation, Machine Learning | <strong>Dernière Mise à Jour :</strong> Aug 25</p>
-            </div>
-
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Algo_Recommandation" target="_blank" class="project-link">Algo_Recommandation</a></h3>
-                <p>Développement d'algorithmes de recommandation pour divers cas d'utilisation. Ce projet explore différentes approches pour améliorer les recommandations.</p>
-                <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> Recommandation, Machine Learning | <strong>Dernière Mise à Jour :</strong> Aug 25</p>
-            </div>
-
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Perceptron" target="_blank" class="project-link">Perceptron</a></h3>
-                <p>Implémentation d'un perceptron pour des tâches de classification binaire. Le projet démontre les bases des réseaux de neurones.</p>
-                <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> Machine Learning | <strong>Dernière Mise à Jour :</strong> Aug 25</p>
-            </div>
-
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Chat_Bot_IA" target="_blank" class="project-link">Chat_Bot_IA</a></h3>
-                <p>Développement d'un chatbot intelligent utilisant des techniques de traitement du langage naturel pour des interactions utilisateur.</p>
-                <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> NLP, Chatbot | <strong>Dernière Mise à Jour :</strong> Aug 25</p>
-            </div>
-
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Boosting" target="_blank" class="project-link">Boosting</a></h3>
-                <p>Mise en œuvre de techniques de boosting pour améliorer la performance des modèles de classification. Ce projet illustre l'application d'algorithmes avancés.</p>
-                <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> Boosting, Machine Learning | <strong>Dernière Mise à Jour :</strong> Aug 25</p>
-            </div>
-
-            <div class="project">
-                <h3><a href="https://github.com/Elzoghost/Optimisation_Algorithmes" target="_blank" class="project-link">Optimisation_Algorithmes</a></h3>
-                <p>Optimisation des algorithmes pour améliorer leur efficacité et leur vitesse. Le projet se concentre sur l'optimisation des performances des algorithmes de traitement de données.</p>
-                <p><strong>Langages :</strong> Python | <strong>Technologies :</strong> Optimisation, Algorithmes | <strong>Dernière Mise à Jour :</strong> Aug 25</p>
-            </div>
+            <!-- Ajoute plus de projets ici -->
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <p><strong>Email :</strong> <a href="mailto:elzodp125@gmail.com" class="contact-link">elzodp125@gmail.com</a></p>
-            <p><strong>Téléphone :</strong> +33 7 84 99 92 97</p>
-            <p><strong>Adresse :</strong> 42 Rue Raymond Patenôtre, 78120 Rambouillet</p>
-            <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/elhadji-fallou-diop" class="contact-link">linkedin.com/in/elhadji-fallou-diop</a></p>
-            <p><strong>GitHub :</strong> <a href="https://github.com/Elzoghost" class="contact-link">github.com/Elzoghost</a></p>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Elhadji Fallou Diop. Tous droits réservés.</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 Elhadji Fallou Diop | <a href="https://github.com/Elzoghost" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">LinkedIn</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

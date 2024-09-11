@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détection de fausses nouvelles">
+    <title>Détection de fausses nouvelles</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../about.html">À propos de moi</a></li>
+                <li><a href="../index.html#projects">Projets</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h2>Détection de fausses nouvelles</h2>
+        <p class="project-description">
+            <strong>Description :</strong> Ce projet est une API web construite avec Flask pour prédire la fiabilité d'un texte donné en utilisant un modèle de machine learning pré-entraîné. L'API permet de soumettre des données JSON comprenant un titre, un auteur et un texte. Le texte est prétraité et traduit en anglais si nécessaire avant que la prédiction soit effectuée par le modèle. Les prédictions sont renvoyées sous forme de labels lisibles ("Fiable" ou "Peu Fiable").
+        </p>
+        <p class="project-objective">
+            <strong>Objectif :</strong> 'objectif de ce projet est de développer une API web capable de déterminer la fiabilité d'un texte en utilisant un modèle de machine learning pré-entraîné. Cette API facilite l'intégration de la classification des textes dans des applications ou des services en ligne. Voici les objectifs spécifiques :
+            <ul class="steps-list">
+                <li>**Prédiction de Fiabilité** : Évaluer si un texte est fiable ou peu fiable en utilisant un modèle de machine learning.</li>
+                <li>**Traduction Automatique** : Traduire le texte en anglais si nécessaire avant l'analyse, pour permettre une évaluation uniforme quel que soit la langue originale du texte.</li>
+                <li>**Prétraitement des Textes** : Nettoyer et préparer le texte pour améliorer la précision des prédictions du modèle.</li>
+                <li>**Accessibilité via API** : Fournir un endpoint HTTP pour recevoir des données au format JSON, traiter les demandes, et retourner les résultats en JSON, facilitant ainsi l'intégration dans divers systèmes et applications.</li>
+                <li>**Facilité d'Utilisation** : Offrir une interface simple pour tester et intégrer des fonctionnalités de détection de fiabilité des textes dans des projets ou des services en ligne.</li>
+            </ul>
+
+        </p>
+        <p class="project-languages">
+            <strong>Langages utilisés :</strong> Python
+        </p>
+        <p class="project-tech">
+            <strong>Technologies et Bibliothèques :</strong>
+            <ul class="tech-list">
+                <li>Flask</li>
+                <li>Joblib</li>
+                <li>Googletrans </li>
+                <li>TensorFlow & Keras</li>
+                <li>Scikit-learn</li>
+            </ul>
+        </p>
+        <p class="project-steps">
+            <strong>Étapes du Projet :</strong>
+            <ul class="steps-list">
+                <li>Chargement et nettoyage des données</li>
+                <li>Prétraitement et normalisation</li>
+                <li>Entraînement d'un modèle de réseau de neurones</li>
+                <li>Évaluation du modèle à l'aide de courbes de perte et d'accuracy</li>
+                <li>Matrice de confusion et visualisation des performances</li>
+            </ul>
+        </p>
+        <p class="project-link">
+            <strong>Code source :</strong> Retrouvez le code complet de ce projet sur <a href="https://github.com/Elzoghost/NLP_FakeNews" target="_blank" class="project-link">NLP_FakeNews</a>.
+        </p>
+
+        <!-- Tu peux intégrer un dashboard ici via Plotly ou Bokeh -->
+        <div id="dashboard"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Elhadji Fallou Diop | <a href="https://github.com/Elzoghost" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <!-- Intégration du dashboard via Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        const trace = {
+            x: [1, 2, 3, 4],
+            y: [10, 11, 12, 13],
+            type: 'scatter'
+        };
+        const data = [trace];
+        Plotly.newPlot('dashboard', data);
+    </script>
+</body>
+</html>

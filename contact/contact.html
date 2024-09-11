@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact | Elzoghost</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../about.html">À propos de moi</a></li>
+                <li><a href="../index.html#projects">>Projets</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h1>Me Contacter</h1>
+        <p>Vous pouvez me joindre via les coordonnées ci-dessous :</p>
+        
+        <div class="contact-info">
+            <p><strong>Téléphone :</strong> <a href="tel:+33784999296">+33 7 84 99 92 96</a></p>
+            <p><strong>Email :</strong> <a href="mailto:elzodp125@gmail.com">elzodp125@gmail.com</a></p>
+            <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">linkedin.com/in/elhadji-fallou-diop</a></p>
+            <p><strong>GitHub :</strong> <a href="https://github.com/Elzoghost" target="_blank">github.com/Elzoghost</a></p>
+        </div>
+
+        <div class="social-links">
+            <h2>Suivez-moi sur les réseaux sociaux :</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/Elzoghost" target="_blank">GitHub</a></li>
+                <li><a href="https://twitter.com/Elzoghost" target="_blank">Twitter</a></li> <!-- Exemple d'un autre lien -->
+            </ul>
+        </div>
+
+        <form class="contact-form" action="submit_contact_form.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Elhadji Fallou Diop. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
