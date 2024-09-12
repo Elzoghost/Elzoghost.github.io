@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détection de fausses nouvelles">
+    <title>Reconnaissance de Chiffres Manuscrits</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../about.html">À propos de moi</a></li>
+                <li><a href="../index.html#projects">Projets</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h2>Reconnaissance de Chiffres Manuscrits avec un Réseau de Neurones Convolutif (CNN) sur le Jeu de Données MNIST</h2>
+        <p class="project-description">
+            <strong>Description :</strong> Le projet consiste à construire un modèle de réseau de neurones convolutif (CNN) pour la classification d'images à partir du jeu de données MNIST. MNIST contient des images de chiffres manuscrits (de 0 à 9), et l'objectif est de reconnaître ces chiffres à partir des images en utilisant un modèle de deep learning.
+        </p>
+        <p class="project-objective">
+            <strong>Objectif :</strong>  L'objectif principal est de :
+            <ul class="steps-list">
+                <li>Construire et entraîner un modèle CNN pour classer les images de chiffres du jeu de données MNIST.</li>
+                <li>Évaluer les performances du modèle en termes de précision sur les jeux de test.</li>
+                <li>Tester le modèle en chargeant des images manuscrites personnalisées et prédire le chiffre représenté sur l'image.</li>
+            </ul>
+
+        </p>
+        <p class="project-languages">
+            <strong>Langages utilisés :</strong> Python
+        </p>
+        <p class="project-tech">
+            <strong>Technologies et Bibliothèques :</strong>
+            <ul class="tech-list">
+                <li>NumPy : pour le traitement des données sous forme de tableaux.</li>
+                <li>Matplotlib : pour la visualisation des résultats d'entraînement et des prédictions./li>
+                <li>PIL (Python Imaging Library) : pour le traitement des images téléchargées.</li>
+                <li>Google Colab : utilisé pour exécuter le code et charger des images directement.</li>
+                <li>TensorFlow/Keras : pour la création et l'entraînement du modèle CNN.</li>
+            </ul>
+        </p>
+        <p class="project-tech">
+            <strong>Modèles et outils :</strong>
+            <ul class="tech-list">
+                <li>Réseau de Neurones Convolutif (CNN):</li>
+                <p>Un modèle de deep learning conçu pour le traitement d'images. Il se compose de couches convolutives pour extraire les caractéristiques des images, de couches de pooling pour réduire la taille des cartes de caractéristiques, et de couches entièrement connectées pour effectuer la classification.</p>
+                <li>Architecture spécifique utilisée :</li>
+                    <li>Couches Convolutives : Extraction des caractéristiques via des filtres 2D.</li>
+                    <li>Couches MaxPooling : Réduction de la dimension des caractéristiques extraites.</li>
+                    <li>Couche Dense : Classification finale en utilisant une fonction d'activation softmax.</li>
+                
+            </ul>
+        </p>
+        <p class="project-steps">
+            <strong>Étapes du Projet :</strong>
+            <ul class="steps-list">
+                <li>Chargement du Jeu de Données MNIST :</li>
+                    <p>Le jeu de données MNIST est chargé via mnist.load_data(). Il contient 60 000 images pour l'entraînement et 10 000 images pour les tests.</p>
+                <li>Prétraitement et normalisation</li>
+                    <p>Les images du jeu de données sont :
+
+                        Redimensionnées pour correspondre au format (28x28x1).
+                        Normalisées en divisant les pixels par 255 afin que les valeurs soient entre 0 et 1.
+                        Les labels (chiffres de 0 à 9) sont convertis en format catégoriel via to_categorical().
+                    </p>
+                <li>Création du Modèle CNN :</li>
+                    <p>Un modèle CNN est créé avec les étapes suivantes :
+
+                        Couches convolutives (Conv2D) pour l'extraction des caractéristiques.
+                        Couches de sous-échantillonnage (MaxPooling2D) pour réduire la taille des cartes de caractéristiques.
+                        Une couche entièrement connectée (Dense) pour la classification finale.
+                        Utilisation de la régularisation par Dropout pour éviter le surapprentissage.
+                    </p>
+                <li>Compilation du Modèle :</li>
+                    <p>Le modèle est compilé avec l'optimiseur Adam et la fonction de perte categorical_crossentropy. La métrique choisie est la précision (accuracy).
+                    </p>
+                <li>Évaluation du modèle à l'aide de courbes de perte et d'accuracy</li>
+                    <p>Après l'entraînement, le modèle est évalué sur le jeu de données de test pour obtenir la précision finale.
+
+                    </p>
+                <li>Matrice de confusion et visualisation des performances</li>
+                    <p>Les courbes de précision et de perte sont tracées pour les phases d'entraînement et de validation, permettant de voir l'évolution des performances du modèle.
+
+                    </p>
+                <li>Chargement et Prédiction sur des Images Personnalisées :</li>
+                    <p>Les utilisateurs peuvent télécharger leurs propres images manuscrites, qui sont prétraitées et redimensionnées en 28x28 pixels. Le modèle prédit ensuite le chiffre sur l'image, et les résultats sont affichés.
+
+                    </p>
+            </ul>
+        </p>
+        <p class="project-link">
+            <strong>Code source :</strong> Retrouvez le code complet de ce projet sur <a href="https://github.com/Elzoghost/Classification_Conv2net_MNIST" target="_blank" class="project-link">Classification_Conv2net_MNIST</a>.
+        </p>
+        <p><a href="../dashboards/dashboard_classification_mnist.html">Voir le Dashboard Interactif</a></p>
+        <!-- Tu peux intégrer un dashboard ici via Plotly ou Bokeh -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Elhadji Fallou Diop | <a href="https://github.com/Elzoghost" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">LinkedIn</a></p>
+    </footer>
+</body>
+</html>
