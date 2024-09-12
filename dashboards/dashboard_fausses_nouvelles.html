@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard de classification du cancer du sein">
+    <title>Dashboard - Détection de fausses nouvelles</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Pour les graphiques -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../about.html">À propos de moi</a></li>
+                <li><a href="../index.html#projects">Projets</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <h1>Dashboard - Détection de fausses nouvelles</h1>
+        <p>Ce tableau de bord présente les performances du modèle de classification pour prédire si un article de presse est peu fiable ou fiable.</p>
+
+        <!-- Section des graphiques -->
+        <div class="charts">
+            <p>La distribution des classes.</p>
+            <img src="../images/fkdistribution_class.png" alt="Visualisation des classes  des articles " style="width: 55%;">
+            <p>Nuage des articles fiables.</p>
+            <img src="../images/fknuage_fiable.png" alt="Visualisation du nuage de mots des articles fiables " style="width: 55%;">
+            
+            <!--<img src="../images/train_val_loss.png" alt="Visualisation du projet Classification Cancer du Sein" style="width: 75%;">-->
+            
+            <!--<img src="../images/train_val_acc.png" alt="Visualisation du projet Classification Cancer du Sein" style="width: 75%;">-->
+            
+            <!--<img src="../images/matrice_de_confusion.png" alt="Visualisation du projet Classification Cancer du Sein" style="width: 75%;"> -->
+            <p>Les pertes d'entrainement et de validation.</p>
+            <div class="chart-container" style="width: 55%;">
+                <canvas id="lossChart"></canvas>  Graphique des pertes 
+            </div>
+            <p>L'accuracy d'entrainement et de validation.</p>
+            <div class="chart-container" style="width: 55%;">
+                <canvas id="accuracyChart"></canvas>  Graphique des précisions
+            </div>
+            <p>La matrice de confusion sur les données de test.</p>
+            <div class="chart-container" style="width: 55%;">
+                <canvas id="confusionMatrixChart"></canvas> Graphique de la matrice de confusion
+            </div>
+        </div>
+
+        <!-- Matrice de confusion -->
+        <div class="matrix-container">
+            <h2>Matrice de confusion</h2>
+            <div id="confusionMatrix">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Prédit: Fiable</th>
+                            <th>Prédit: Peu Fiable</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Vrai: Fiable</th>
+                            <td id="trueBenign">65</td>
+                            <td id="falseMalignant">38</td>
+                        </tr>
+                        <tr>
+                            <th>Vrai: Peu Fiable</th>
+                            <td id="falseBenign">35</td>
+                            <td id="trueMalignant">62</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Elhadji Fallou Diop | <a href="https://github.com/Elzoghost" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        // Graphique de la perte (loss)
+        var lossData = {
+            labels: [1, 2, 3], // Nombres d'époques
+            datasets: [{
+                label: 'Training Loss',
+                borderColor: 'yellow',
+                data: [ 0.2199 , 0.0208, 0.0032], // Données de loss d'entraînement
+                fill: false
+            }, {
+                label: 'Validation Loss',
+                borderColor: 'blue',
+                data: [0.0444, 0.0231, 0.0259], // Données de validation loss
+                fill: false
+            }]
+        };
+
+        var lossChartConfig = {
+            type: 'line',
+            data: lossData,
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Training and Validation Loss'
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Epochs'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Loss'
+                        }
+                    }
+                }
+            }
+        };
+
+        var lossChart = new Chart(
+            document.getElementById('lossChart'),
+            lossChartConfig
+        );
+
+        // Graphique de la précision (accuracy)
+        var accuracyData = {
+            labels: [1, 2, 3], // Nombres d'époques
+            datasets: [{
+                label: 'Training Accuracy',
+                borderColor: 'red',
+                data: [0.9907, 0.9953, 0.9954], // Données de précision d'entraînement
+                fill: false
+            }, {
+                label: 'Validation Accuracy',
+                borderColor: 'green',
+                data: [0.9906, 0.9950, 0.9950], // Données de validation accuracy
+                fill: false
+            }]
+        };
+
+        var accuracyChartConfig = {
+            type: 'line',
+            data: accuracyData,
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Training and Validation Accuracy'
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Epochs'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Accuracy'
+                        }
+                    }
+                }
+            }
+        };
+
+        var accuracyChart = new Chart(
+            document.getElementById('accuracyChart'),
+            accuracyChartConfig
+        );
+
+        // Graphique de la matrice de confusion
+        var confusionMatrixData = {
+            labels: ['Prédit: Fiable', 'Prédit: Peu Fiable'],
+            datasets: [{
+                label: 'Vrai: Fiable',
+                data: [65, 38], // Valeurs pour "Vrai: Bénin"
+                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }, {
+                label: 'Vrai: Peu Fiable',
+                data: [35, 62], // Valeurs pour "Vrai: Malin"
+                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        var confusionMatrixChartConfig = {
+            type: 'bar',
+            data: {
+                labels: ['Prédit: Fiable', 'Prédit: Peu Fiable'],
+                datasets: [{
+                    label: 'Vrai: Fiable',
+                    data: [65, 38], // Valeurs pour "Vrai: Bénin"
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Vrai: Peu Fiable',
+                    data: [35, 62], // Valeurs pour "Vrai: Malin"
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Matrice de Confusion'
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Catégories'
+                        },
+                        stacked: true
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Nombre'
+                        }
+                    }
+                }
+            }
+        };
+
+        var confusionMatrixChart = new Chart(
+            document.getElementById('confusionMatrixChart'),
+            confusionMatrixChartConfig
+        );
+    </script>
+</body>
+</html>

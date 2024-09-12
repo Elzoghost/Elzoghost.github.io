@@ -73,25 +73,12 @@
         <p class="project-link">
             <strong>Code source :</strong> Retrouvez le code complet de ce projet sur <a href="https://github.com/Elzoghost/Detection_FakeNews_IA" target="_blank" class="project-link">Detection_FakeNews_IA</a>.
         </p>
-
+        <p><a href="../dashboards/dashboard_fausses_nouvelles.html">Voir le Dashboard Interactif</a></p>
         <!-- Tu peux intégrer un dashboard ici via Plotly ou Bokeh -->
-        <div id="dashboard"></div>
     </section>
 
     <footer>
         <p>&copy; 2024 Elhadji Fallou Diop | <a href="https://github.com/Elzoghost" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">LinkedIn</a></p>
     </footer>
-
-    <!-- Intégration du dashboard via Plotly -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script>
-        const trace = {
-            x: [1, 2, 3, 4],
-            y: [10, 11, 12, 13],
-            type: 'scatter'
-        };
-        const data = [trace];
-        Plotly.newPlot('dashboard', data);
-    </script>
 </body>
 </html>
