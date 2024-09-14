@@ -1,6 +1,6 @@
 [
     {
-        "title": "Detection de fausses nouvelles",
+        "title": "Détection de fausses nouvelles",
         "path": "detection-de-fausses-nouvelles.md"
     },
     {
@@ -9,6 +9,6 @@
     },
     {
         "title": "Reconnaissance de Chiffres Manuscrits",
-        "path": "classification-mnist.md"
+        "path": "reconnaissance-de-chiffres-manuscrits.md"
     }
 ]
