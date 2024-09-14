@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PTL8JNMQ');</script>
+        <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Elhadji Fallou Diop, spécialiste en Data Science, Data Engineering et Business Intelligence.">
     <title>Elhadji Fallou Diop - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <title>Mon Blog</title>
+    <!-- Chargement de la bibliothèque marked.js pour la conversion Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
+        <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTL8JNMQ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
     <header>
         <nav>
             <ul>
@@ -15,6 +30,7 @@
                 <li><a href="about.html">À propos de moi</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="contact/contact.html">Contact</a></li>
+                <li><a href="blog-view.html">Mon blog</a></li>
             </ul>
         </nav>
     </header>
@@ -42,7 +58,7 @@
             </div>
             <div class="project-card">
                 <h3>Reconnaissance de Chiffres Manuscrits</h3>
-                <p>Le projet consiste à construire un modèle de réseau de neurones convolutif (CNN) pour la classification d'images à partir du jeu de données MNIST.</p>
+                <p>Le projet consiste à construire un modèle de réseau de neurones convolutif (CNN) pour la classification d'images.</p>
                 <a href="projects/classification_mnist.html" class="btn">Voir le projet</a>
             </div>
             <!-- Ajoute plus de projets ici -->
@@ -50,7 +66,8 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Elhadji Fallou Diop | <a href="https://github.com/Elzoghost" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">LinkedIn</a></p>
+        <p>&copy; <span class="year"></span> Elhadji Fallou Diop | <a href="https://github.com/Elzoghost" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">LinkedIn</a></p>
+
     </footer>
 
     <script src="script.js"></script>

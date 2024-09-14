@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article du Blog</title>
+    <!-- Chargement de la bibliothèque marked.js pour la conversion Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos de moi</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="contact/contact.html">Contact</a></li>
+                <li><a href="../blog-view.html">Mon blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Bienvenue sur Mon Blog</h1>
+    
+        <h2>Articles</h2>
+        
+        <!-- Liste des articles sera injectée ici -->
+        <ul id="blog-list"></ul>
+            <!-- Contenu de l'article Markdown sera injecté ici -->
+        <div id="blog-content"></div>   
+    </section>
+    
+    <footer>
+        <p>&copy; <span class="year"></span> Elhadji Fallou Diop | <a href="https://github.com/Elzoghost" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/elhadji-fallou-diop/" target="_blank">LinkedIn</a></p>
+
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
