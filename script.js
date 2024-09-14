@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Fonction pour charger et afficher un fichier Markdown
 async function loadMarkdown(file) {
     try {
-        const response = await fetch(`blog/${file}`);
+        const response = await fetch(`../blog/${file}`);
         console.log(response); // Ajoute un log pour vérifier la réponse
         if (!response.ok) {
             document.getElementById('blog-content').innerHTML = 'Erreur : Article introuvable.';
