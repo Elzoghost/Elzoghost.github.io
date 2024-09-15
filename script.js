@@ -1,3 +1,4 @@
+// Ajoute des fonctionnalités interactives ici (ex: animations, form validations, etc.)
 document.addEventListener("DOMContentLoaded", function() {
     // Animation d'apparition pour le texte de la section hero
     const heroText = document.querySelector(".hero-content h1");
@@ -86,63 +87,68 @@ document.addEventListener("DOMContentLoaded", function() {
     yearElements.forEach(element => {
         element.textContent = currentYear;
     });
+});
 
-    document.addEventListener("DOMContentLoaded", function() {
-    // Fonction pour charger et afficher un fichier Markdown
-    async function loadMarkdown(file) {
-        try {
-            const response = await fetch(`blog/${file}`);
-            if (!response.ok) {
-                document.getElementById('blog-content').innerHTML = 'Erreur : Article introuvable.';
-                return;
-            }
-            const markdown = await response.text();
-            const blogContent = marked.parse(markdown);
-            document.getElementById('blog-content').innerHTML = blogContent;
-        } catch (error) {
-            console.error('Erreur lors du chargement de l\'article :', error);
-            document.getElementById('blog-content').innerHTML = 'Erreur lors du chargement de l\'article.';
+// Fonction pour charger et afficher un fichier Markdown
+async function loadMarkdown(file) {
+    try {
+        const response = await fetch(`blog/${file}`);
+        console.log(response); // Ajoute un log pour vérifier la réponse
+        if (!response.ok) {
+            document.getElementById('blog-content').innerHTML = 'Erreur : Article introuvable.';
+            return;
         }
-    }
 
-    // Charger le fichier Markdown basé sur le paramètre de l'URL
+        const markdown = await response.text();
+        console.log(markdown); // Ajoute un log pour vérifier le contenu du Markdown
+        const blogContent = marked.parse(markdown);
+        document.getElementById('blog-content').innerHTML = blogContent;
+    } catch (error) {
+        console.error('Erreur lors du chargement de l\'article :', error);
+        document.getElementById('blog-content').innerHTML = 'Erreur lors du chargement de l\'article.';
+    }
+}
+
+// Charger le contenu de l'article si on est sur la page blog-view.html
+if (window.location.pathname.endsWith('blog-view.html')) {
     const urlParams = new URLSearchParams(window.location.search);
     const file = urlParams.get('file');
     if (file) {
         loadMarkdown(file);
     } else {
-        document.getElementById('blog-content').innerHTML = 'Aucun article sélectionné.';
+        document.getElementById('blog-content').innerHTML = '';
     }
-});
+}
 
-
-    // Fonction pour charger la liste des articles
-    async function loadArticles() {
-        try {
-            const response = await fetch('blog/articles.json');
-            if (!response.ok) {
-                throw new Error('Erreur lors du chargement des articles');
-            }
-            const articles = await response.json();
-            const blogList = document.getElementById('blog-list');
-            blogList.innerHTML = '';
-            articles.forEach(article => {
-                const link = document.createElement('a');
-                link.href = `blog-view.html?file=${encodeURIComponent(article.path)}`;
-                link.textContent = article.title;
-                const listItem = document.createElement('li');
-                listItem.appendChild(link);
-                blogList.appendChild(listItem);
-            });
-        } catch (error) {
-            console.error('Erreur lors du chargement des articles :', error);
-            const blogList = document.getElementById('blog-list');
-            blogList.innerHTML = 'Erreur lors du chargement des articles.';
+// Fonction pour charger la liste des articles
+async function loadArticles() {
+    try {
+        const response = await fetch('blog/articles.json');
+        if (!response.ok) {
+            throw new Error('Erreur lors du chargement des articles');
         }
+        const articles = await response.json();
+        const blogList = document.getElementById('blog-list');
+        
+        // Vider la liste avant de la remplir
+        blogList.innerHTML = ''; // Empêche la répétition des articles
+        
+        articles.forEach(article => {
+            const link = document.createElement('a');
+            link.href = `blog-view.html?file=${encodeURIComponent(article.path)}`;
+            link.textContent = article.title;
+            const listItem = document.createElement('li');
+            listItem.appendChild(link);
+            blogList.appendChild(listItem);
+        });
+    } catch (error) {
+        console.error('Erreur lors du chargement des articles :', error);
+        const blogList = document.getElementById('blog-list');
+        blogList.innerHTML = 'Erreur lors du chargement des articles.';
     }
+}
 
-    // Charger la liste des articles si on est sur la page d'accueil ou blog-view.html
-    if (window.location.pathname.endsWith('blog-view.html') || window.location.pathname === '/') {
-        loadArticles();
-    }
-});
+// Appeler la fonction pour charger les articles si on est sur la page d'accueil ou blog-view.html
+if (window.location.pathname.endsWith('blog-view.html') || window.location.pathname === '/') {
+    loadArticles();
+}
