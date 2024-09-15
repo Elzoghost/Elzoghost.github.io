@@ -1,4 +1,3 @@
-// Ajoute des fonctionnalités interactives ici (ex: animations, form validations, etc.)
 document.addEventListener("DOMContentLoaded", function() {
     // Animation d'apparition pour le texte de la section hero
     const heroText = document.querySelector(".hero-content h1");
@@ -82,15 +81,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Met à jour l'année dynamique dans le footer
-    const currentYear = new Date().getFullYear();
-    const yearElements = document.querySelectorAll('.year');
-    yearElements.forEach(element => {
-        element.textContent = currentYear;
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Met à jour l'année dans le footer
     const currentYear = new Date().getFullYear();
     const yearElements = document.querySelectorAll('.year');
     yearElements.forEach(element => {
