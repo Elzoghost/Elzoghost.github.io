@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
         element.textContent = currentYear;
     });
 
+    document.addEventListener("DOMContentLoaded", function() {
     // Fonction pour charger et afficher un fichier Markdown
     async function loadMarkdown(file) {
         try {
@@ -103,6 +104,17 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('blog-content').innerHTML = 'Erreur lors du chargement de l\'article.';
         }
     }
+
+    // Charger le fichier Markdown basé sur le paramètre de l'URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get('file');
+    if (file) {
+        loadMarkdown(file);
+    } else {
+        document.getElementById('blog-content').innerHTML = 'Aucun article sélectionné.';
+    }
+});
+
 
     // Fonction pour charger la liste des articles
     async function loadArticles() {
