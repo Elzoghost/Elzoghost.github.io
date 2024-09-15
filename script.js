@@ -92,15 +92,15 @@ document.addEventListener("DOMContentLoaded", function() {
 // Fonction pour charger et afficher un fichier Markdown
 async function loadMarkdown(file) {
     try {
-        const response = await fetch(`blog/${file}`);
-        console.log(response); // Ajoute un log pour vérifier la réponse
+        const response = await fetch(`blog/${file}`); // Vérifie ce chemin
+        console.log(response);
         if (!response.ok) {
             document.getElementById('blog-content').innerHTML = 'Erreur : Article introuvable.';
             return;
         }
 
         const markdown = await response.text();
-        console.log(markdown); // Ajoute un log pour vérifier le contenu du Markdown
+        console.log(markdown);
         const blogContent = marked.parse(markdown);
         document.getElementById('blog-content').innerHTML = blogContent;
     } catch (error) {
@@ -109,29 +109,17 @@ async function loadMarkdown(file) {
     }
 }
 
-// Charger le contenu de l'article si on est sur la page blog-view.html
-if (window.location.pathname.endsWith('blog-view.html')) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const file = urlParams.get('file');
-    if (file) {
-        loadMarkdown(file);
-    } else {
-        document.getElementById('blog-content').innerHTML = '';
-    }
-}
-
 // Fonction pour charger la liste des articles
 async function loadArticles() {
     try {
-        const response = await fetch('blog/articles.json');
+        const response = await fetch('blog/articles.json'); // Vérifie ce chemin
         if (!response.ok) {
             throw new Error('Erreur lors du chargement des articles');
         }
         const articles = await response.json();
         const blogList = document.getElementById('blog-list');
         
-        // Vider la liste avant de la remplir
-        blogList.innerHTML = ''; // Empêche la répétition des articles
+        blogList.innerHTML = '';
         
         articles.forEach(article => {
             const link = document.createElement('a');
@@ -146,9 +134,4 @@ async function loadArticles() {
         const blogList = document.getElementById('blog-list');
         blogList.innerHTML = 'Erreur lors du chargement des articles.';
     }
-}
-
-// Appeler la fonction pour charger les articles si on est sur la page d'accueil ou blog-view.html
-if (window.location.pathname.endsWith('blog-view.html') || window.location.pathname === '/') {
-    loadArticles();
 }
