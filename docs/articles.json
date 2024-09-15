@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Détection de fausses nouvelles",
+        "path": "blog/detection-de-fausses-nouvelles.md"
+    },
+    {
+        "title": "Classification du cancer du sein",
+        "path": "blog/classification-du-cancer-du-sein.md"
+    },
+    {
+        "title": "Reconnaissance de Chiffres Manuscrits",
+        "path": "blog/reconnaissance-de-chiffres-manuscrits.md"
+    }
+]

@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp  # Fichiers temporaires de Vim
+
+# Sauvegardes d'éditeurs de texte
+*.bak
+*.tmp
