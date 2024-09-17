@@ -189,3 +189,217 @@ nav ul {
     padding: 10px 15px;
   }
   
+  @font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Regular.ttf') format('ttf'),
+         url('assets/fonts/Roboto-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.fa-laptop-code {
+    color: #4CAF50; /* Change la couleur */
+    font-size: 24px; /* Change la taille */
+    margin-right: 10px; /* Ajoute un espacement à droite */
+}
+
+#about-me ul {
+    list-style-type: none; /* Supprimer les puces par défaut */
+    padding: 0;
+}
+
+#about-me li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+    font-size: 18px;
+}
+
+#about-me i {
+    color: #007BFF; /* Couleur des icônes */
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    font-size: 24px; /* Taille des icônes */
+}
+#education ul {
+    list-style-type: none; /* Supprimer les puces par défaut */
+    padding: 0;
+}
+
+#education li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+    font-size: 18px;
+}
+
+#education i {
+    color: #007BFF; /* Couleur des icônes */
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    font-size: 24px; /* Taille des icônes */
+}
+
+#interests ul {
+    list-style-type: none; /* Supprimer les puces par défaut */
+    padding: 0;
+}
+
+#interests li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+    font-size: 18px;
+}
+
+#interests i {
+    color: #007BFF; /* Couleur des icônes */
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    font-size: 24px; /* Taille des icônes */
+}
+
+#cv p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#cv a {
+    color: #007BFF; /* Couleur du lien */
+    text-decoration: none; /* Supprimer le soulignement du lien */
+}
+
+#cv a:hover {
+    text-decoration: underline; /* Ajouter un soulignement au survol du lien */
+}
+
+.cv-download {
+    margin-top: 20px;
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF; /* Couleur de fond du bouton */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none; /* Supprimer le soulignement du lien */
+}
+
+.cv-button:hover {
+    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+}
+
+footer {
+    background-color: #f1f1f1; /* Couleur de fond du footer */
+    padding: 20px;
+    text-align: center; /* Centrer le texte */
+    border-top: 1px solid #ddd; /* Bordure supérieure */
+}
+
+#footer-text {
+    font-size: 14px;
+    color: #333;
+}
+
+#footer-text a {
+    color: #007BFF; /* Couleur des liens */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    margin: 0 10px; /* Espacement entre les liens */
+}
+
+#footer-text a:hover {
+    text-decoration: underline; /* Ajouter le soulignement au survol */
+}
+
+/*Image du menu*/
+
+.home {
+    background-image: url('images/menu.jpg'); /* Chemin vers l'image de fond */
+    background-size: cover; /* Ajuster l'image pour couvrir tout l'espace */
+    background-position: center; /* Centrer l'image de fond */
+    background-attachment: fixed; /* Garder l'image fixe lors du défilement */
+    color: #fff; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    height: 3vh; /* Hauteur de la vue (pleine hauteur de la fenêtre) */
+    display: flex; /* Utiliser Flexbox pour centrer le contenu */
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Aligner horizontalement au centre */
+}
+
+
+/*Test menu*/
+
+header {
+    background-color: #333; /* Couleur de fond de l'en-tête */
+    padding: 10px 0; /* Espacement supérieur et inférieur */
+}
+
+nav ul {
+    list-style-type: none; /* Supprimer les puces des éléments de liste */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centrer les éléments de navigation */
+}
+
+nav ul li {
+    display: inline; /* Afficher les éléments en ligne */
+    margin-right: 20px; /* Espacement entre les éléments */
+}
+
+nav ul li a {
+    color: #fff; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    font-size: 18px; /* Taille de la police */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Ajouter un soulignement au survol */
+    color: #007BFF; /* Changer la couleur des liens au survol */
+}
+
+/*test*/
+
+/* Style pour la section des expériences professionnelles */
+#experience {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.experience {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.experience h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.experience h3 i {
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    color: #007bff; /* Couleur des icônes, peut être modifiée */
+}
+
+.experience p {
+    font-size: 1em;
+    color: #555;
+}
+
+.experience ul {
+    padding-left: 20px;
+}
+
+.experience ul li {
+    margin-bottom: 10px;
+}
+
+#experience h2 i {
+    margin-right: 10px;
+    color: #007bff; /* Couleur des icônes, peut être modifiée */
+}
+
